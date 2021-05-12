@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadImgTestComponent } from './components/upload-img-test/upload-img-test.component';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularNotifierTestComponent } from './new/angular-notifier-test/angular-notifier-test.component';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
 
@@ -56,7 +57,10 @@ const customNotifierOptions: NotifierOptions = {
   ],
   imports: [
     BrowserModule,
+
+    HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     NotifierModule.withConfig(customNotifierOptions)
   ],
   providers: [],
