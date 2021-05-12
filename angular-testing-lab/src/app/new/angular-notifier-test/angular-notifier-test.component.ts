@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotifierService } from 'angular-notifier';
 
 @Component({
   selector: 'app-angular-notifier-test',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AngularNotifierTestComponent implements OnInit {
 
-  constructor() { }
+  private readonly notifier:NotifierService
+  constructor(private notifierService: NotifierService) {
+    this.notifier = notifierService;
+   }
+
+   hideAll(){
+     this.notifier.hideAll()
+   }
 
   ngOnInit(): void {
+    this.notifier.notify('success', 'You are awesome! I mean it!');
+    this.notifier.notify('success', 'You are awesome! I mean it!');
+    this.notifier.notify('success', 'You are awesome! I mean it!');
+    this.notifier.notify('success', 'You are awesome! I mean it!');
+    this.notifier.notify('success', 'You are awesome! I mean it!');
   }
 
 }
