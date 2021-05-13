@@ -29,6 +29,7 @@ export class UploadImgTestComponent implements OnInit {
     formData.append("file", this.file, this.file.name);
     formData.append("name", data.name);
     
+    
     console.log(this.file.name, this.file, formData);
 
     await this.http.post(this.baseUrl, formData).subscribe((response) => {
