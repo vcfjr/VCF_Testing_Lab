@@ -9,9 +9,9 @@
    houseNumber: 123
  };
  
- cc = {
-   houseNumber: 33
- };
+//  cc = {
+//    houseNumber: 33
+//  };
  /**
   * 🚨 Property 'streetName'
   * 🚨   is missing in type   '{ houseNumber: number; }'
