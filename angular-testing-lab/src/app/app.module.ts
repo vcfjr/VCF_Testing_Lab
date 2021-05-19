@@ -7,6 +7,7 @@ import { UploadImgTestComponent } from './components/upload-img-test/upload-img-
 import { HttpClientModule } from '@angular/common/http';
 import { AngularNotifierTestComponent } from './new/angular-notifier-test/angular-notifier-test.component';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
+import { AngularRoutingDeepComponent } from './angular/angular-routing-deep/angular-routing-deep.component';
 
 const customNotifierOptions: NotifierOptions = {
 	position: {
@@ -53,7 +54,8 @@ const customNotifierOptions: NotifierOptions = {
   declarations: [
     AppComponent,
     UploadImgTestComponent,
-    AngularNotifierTestComponent
+    AngularNotifierTestComponent,
+    AngularRoutingDeepComponent
   ],
   imports: [
     BrowserModule,
