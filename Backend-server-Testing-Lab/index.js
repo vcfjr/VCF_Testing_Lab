@@ -21,6 +21,7 @@ app.post('/upload',multipartMiddleware,(req, res)=>{
 
     blobStorage.createBlockBlobFromLocalFile('imagecontainer', req.files.file.name , req.files.file.path, function(err, result, response){
         if(!err){
+            console.log(blobStorage.getUrl('imagecontainer', req.files.file.name))
             res.send({
                 'message': 'File uploaded successfully.'
             })
