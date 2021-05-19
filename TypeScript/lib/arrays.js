@@ -4,7 +4,7 @@
  */
 let aa = [];
 aa.push(33);
-aa.push("abc"); // 🚨 ERROR: Argument of type '"abc"' is not assignable to parameter of type 'number'.
+// aa.push("abc"); // 🚨 ERROR: Argument of type '"abc"' is not assignable to parameter of type 'number'.
 /**
  * (9) we can even define a tuple, which has a fixed length
  */
@@ -14,7 +14,7 @@ let bb = [
     "Nowhere, USA",
     10110
 ];
-bb = [1, 2, 3]; // 🚨 ERROR: Type 'number' is not assignable to type 'string'.
+// bb = [1, 2, 3]; // 🚨 ERROR: Type 'number' is not assignable to type 'string'.
 /**
  * (10) Tuple values often require type annotations (  : [number, number] )
  */
