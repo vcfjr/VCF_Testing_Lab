@@ -13,10 +13,19 @@ export class UploadImgTestComponent implements OnInit {
   data:any;
 
   baseUrl = 'http://localhost:3000/upload';
+  localURL : any;
 
   // On file Select
   onChange(event:any) {
     this.file = event.target.files[0];
+    // if(event.target.files && event.target.files[0])
+    // {
+    //   var reader = new FileReader();
+    //   reader.onload = (event:any) => {
+    //     this.localURL = event.target.result
+    //   }
+    //   reader.readAsDataURL(event.target.files[0]);
+    // }
   }
 
   async upload(data:any){
@@ -29,7 +38,10 @@ export class UploadImgTestComponent implements OnInit {
     formData.append("file", this.file, this.file.name);
     formData.append("name", data.name);
     
+    
     console.log(this.file.name, this.file, formData);
+
+    console.log(this.file)
 
     await this.http.post(this.baseUrl, formData).subscribe((response) => {
       console.log('response received is ', response);
