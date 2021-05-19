@@ -43,7 +43,7 @@ export class UploadImgTestComponent implements OnInit {
 
     console.log(this.file)
 
-    await this.http.post(this.baseUrl, data).subscribe((response) => {
+    await this.http.post(this.baseUrl, formData).subscribe((response) => {
       console.log('response received is ', response);
   })
 
