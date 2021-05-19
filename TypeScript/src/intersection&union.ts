@@ -12,7 +12,7 @@ export interface HasPhoneNumber {
 
 export interface HasEmail {
   name: string;
-  email?: string;
+  email: string;
 }
 
 let data : HasEmail =  {
