@@ -16,20 +16,26 @@ app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
 // For Cloud Storage
-app.post('/upload',multipartMiddleware,(req, res)=>{
+app.post('/upload',multipartMiddleware,(req, res) => {
     console.log(req.body)
-
-    blobStorage.createBlockBlobFromLocalFile('imagecontainer', req.files.file.name , req.files.file.path, function(err, result, response){
-        if(!err){
-            console.log(blobStorage.getUrl('imagecontainer', req.files.file.name))
-            res.send({
-                'message': 'File uploaded successfully.'
-            })
-        }
-        else{
-            console.log(err);
-        }
-    });
+    
+    for(var i = 0; i<req.files.file.length; i++)
+    {
+        // let upload = "";
+        // console.log(req.files.file[i].name)
+        var name = req.files.file[i].name;
+        blobStorage.createBlockBlobFromLocalFile('imagecontainer', name , req.files.file[i].path, function(err, result, response){
+            if(!err){
+                console.log(blobStorage.getUrl('imagecontainer', name))
+                // res.send({
+                //     'message': 'File uploaded successfully.'
+                // })
+            }
+            else{
+                console.log(err);
+            }
+        });
+    }
 
     
 });

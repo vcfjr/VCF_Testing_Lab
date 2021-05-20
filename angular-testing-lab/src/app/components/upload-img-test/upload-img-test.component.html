@@ -1,6 +1,6 @@
 <p>upload-img-test works!</p>
 <form #uploadForm = "ngForm" (ngSubmit)="upload(uploadForm.value)" enctype="multipart/form-data">
-    <input type="file" (change)="onChange($event)" name="file">
+    <input type="file" (change)="onChange($event)" name="file" multiple>
     <input type="text" name="name" ngModel>
     <!-- <img [src] = "localURL" *ngIf="localURL" name="image" value = "localURL"> -->
     <input type="submit" value="upload">

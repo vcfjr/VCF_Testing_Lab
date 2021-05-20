@@ -17,7 +17,7 @@ export class UploadImgTestComponent implements OnInit {
 
   // On file Select
   onChange(event:any) {
-    this.file = event.target.files[0];
+    this.file = event.target.files;
     // if(event.target.files && event.target.files[0])
     // {
     //   var reader = new FileReader();
@@ -35,8 +35,13 @@ export class UploadImgTestComponent implements OnInit {
     const formData = new FormData(); 
         
     // Store form name as "file" with file data
-    formData.append("file", this.file, this.file.name);
-    formData.append("name", data.name);
+    for(var i=0; i< this.file.length; i++){
+      formData.append("file[]", this.file[i], this.file[i].name);
+    }
+
+      formData.append("name", data.name);
+
+    
     
     
     console.log(this.file.name, this.file, formData);
