@@ -7,10 +7,6 @@ app.get("/", (req, res)=>{
     res.send("requested");
 })
 
-function log(){
-    //other processes
-}
-
 app.listen(3000 || process.env.PORT, ()=>
 {
     console.log("listening...");

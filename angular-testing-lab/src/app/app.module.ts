@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularNotifierTestComponent } from './new/angular-notifier-test/angular-notifier-test.component';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
 import { AngularRoutingDeepComponent } from './angular/angular-routing-deep/angular-routing-deep.component';
+import { AuthComponent } from './firebase/auth/auth.component';
 
 const customNotifierOptions: NotifierOptions = {
 	position: {
@@ -55,7 +56,8 @@ const customNotifierOptions: NotifierOptions = {
     AppComponent,
     UploadImgTestComponent,
     AngularNotifierTestComponent,
-    AngularRoutingDeepComponent
+    AngularRoutingDeepComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

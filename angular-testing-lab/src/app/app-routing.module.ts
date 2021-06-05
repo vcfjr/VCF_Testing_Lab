@@ -7,8 +7,7 @@ import { AngularNotifierTestComponent } from './new/angular-notifier-test/angula
 const routes: Routes = [
   {path:'UploadImg', component: UploadImgTestComponent},
   {path: 'routing', component: AngularRoutingDeepComponent},
-  {path: 'notifier', component: AngularNotifierTestComponent}
-
+  {path: 'notifier', component: AngularNotifierTestComponent},
 ];
 
 @NgModule({
