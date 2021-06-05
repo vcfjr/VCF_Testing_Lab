@@ -4,8 +4,8 @@ const app = express();
 
 app.get("/", (req, res)=>{
     //we have not addded any time related functions here, we just observed that gap b/w two responses
-    setTimeout(function(){console.log("hello")}, 4000)
-    res.send("requested");
+    setTimeout(function(){console.log("hello"); res.send("requested");}, 4000)
+    
 })
 
 app.listen(3000 || process.env.PORT, ()=>
