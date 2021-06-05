@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 
-//Test 1 Code
+//Test 1 Code * Uncomment statement below
 // app.get("/", (req, res) => {
 //     //we have not addded any time related functions here, we just observed that gap b/w two responses
 //     setTimeout(function () { console.log("hello"); }, 4000)
@@ -67,3 +67,12 @@ app.listen(3000 || process.env.PORT, () => {
  */
 
 
+/* -------------------------------------------------------------------------- */
+/*                                FINAL RESULT                                */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * The Results are pretty confusing 
+ * Console logs are treated diffrently and res.send is treated diffrently
+ * You can try these excercises as well
+ */
